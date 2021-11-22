@@ -1,16 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 
-import NavMenu from '@/components/Menu';
-
-import { Container, Informative, Bio, Actions, LawsandProjects, 
-  SliderAboutProjects, Socials, Footer } from '@/styles/Home';
+import {
+  Container, Informative, Bio, Actions, LawsandProjects,
+  SliderAboutProjects, Socials, Footer
+} from '@/styles/Home';
 
 export default function Home() {
   return (
     <>
-      <NavMenu />
-
+      <head>
+        <title>Home | Deputado Federal Otavio Leite</title>
+      </head>
       <Container>
         <Informative>
           <div className="informative-info"></div>
@@ -24,14 +25,14 @@ export default function Home() {
           <div className="otavioleite"></div>
           <div className="bio-otavioleite">
             <p>
-              Otavio Leite, Deputado Federal do Rio de Janeiro, tem 58 anos, sergipano de Aracaju, 
-              é afilhado de batismo do ex-presidente Juscelino Kubitschek. Foi criado no Rio por seu avô – 
-              o senador Júlio Leite. É casado com a pedagoga Ângela Leite e tem dois filhos, Fernando 
+              Otavio Leite, Deputado Federal do Rio de Janeiro, tem 58 anos, sergipano de Aracaju,
+              é afilhado de batismo do ex-presidente Juscelino Kubitschek. Foi criado no Rio por seu avô –
+              o senador Júlio Leite. É casado com a pedagoga Ângela Leite e tem dois filhos, Fernando
               e Otavio Filho.
             </p>
             <p>
-              Professor universitário, especialista em Políticas Públicas pela UFRJ, 
-              estudou no Colégio Andrews de onde saiu para formar-se bacharel em Direito pela UERJ. 
+              Professor universitário, especialista em Políticas Públicas pela UFRJ,
+              estudou no Colégio Andrews de onde saiu para formar-se bacharel em Direito pela UERJ.
               Ainda na UERJ, presidiu o histórico Diretório Acadêmico Luiz Carpenter.
             </p>
 
@@ -50,7 +51,7 @@ export default function Home() {
             <h2>Ações na Câmara</h2>
             <p>Algumas das ações do <b>Deputado Federal Otavio</b> Leite em favor das causas que ele defende.
               Sabemos o quão importante é o trabalho/desenvolvimento em cada uma das áreas, e por isso,
-              estou compartilhando com vocês as ações e projetos que venho lutando por você. 
+              estou compartilhando com vocês as ações e projetos que venho lutando por você.
             </p>
           </div>
 
@@ -82,7 +83,7 @@ export default function Home() {
             </article>
           </SliderAboutProjects>
         </Actions>
-        
+
         <LawsandProjects>
           <h2 id="leiseprojetos">Leis e Projetos</h2>
           <p>Com os anos de experiências em cargos <b>Municipais, Estaduais e Federais</b> o <b>Deputado Federal Otavio Leite</b>,

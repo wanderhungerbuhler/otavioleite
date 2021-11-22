@@ -1,34 +1,5 @@
 import styled from 'styled-components';
 
-export const Menu = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  ul {
-    margin-top: 30px;
-    li { list-style: none; display: inline-block; padding: 0 10px; }
-    a { color: #999; text-decoration: none; padding: 5px 10px; transition: all .7s ease-in-out;
-      &:hover { background: #005AFF; color: #fff; padding: 5px 10px; transition: all .7s ease-in-out;
-        border-radius: 7px;  }
-    }
-  }
-
-  @media (max-width: 500px) {
-    ul {
-      li { display: block; text-align: center; margin-bottom: 10px; }
-    }
-  }
-`;
-
-export const Logo = styled.div`
-  width: 150px;
-  height: 107px;
-  background: url('./assets/logo.svg') no-repeat center center;
-  background-size: 100%;
-  margin: 10px auto;
-`;
-
 export const Container = styled.div`
   max-width: 1360px;
   width: 90%;
@@ -92,7 +63,7 @@ export const Actions = styled.div`
     width: 50%;
     margin: 0 auto;
     text-align: center;
-    
+
   }
 
   @media (max-width: 500px) {
@@ -101,13 +72,13 @@ export const Actions = styled.div`
 `;
 
 export const ContainerAbout = styled.div`
-  .logoAbout { 
+  .logoAbout {
     width: 150px;
     height: 107px;
-    background: url('../assets/logo.svg') no-repeat center center; 
+    background: url('../assets/logo.svg') no-repeat center center;
     background-size: 100%;
-    margin: 10px auto; 
-    display: block; 
+    margin: 10px auto;
+    display: block;
   }
 
   .content-about {
@@ -141,7 +112,7 @@ export const SliderAboutProjects = styled.section`
   justify-content: flex-start;
 
   .active { flex: 35%; }
-  
+
   article {
     width: 210px;
     height: 500px;
@@ -150,7 +121,7 @@ export const SliderAboutProjects = styled.section`
     transition: all .5s ease-in-out;
     flex: 0 0 16%;
     position: relative;
-    
+
     @media (max-width: 500px) {
       margin-top: 10px;
       flex: 33%;
@@ -163,7 +134,7 @@ export const SliderAboutProjects = styled.section`
 
     &:hover { width: 430px; cursor: pointer; flex: 0 0 35%; left: 0;
       transition: all .5s ease-in-out; }
-    
+
     .icons-projects {
       width: 40%;
       height: 100px;
@@ -175,7 +146,7 @@ export const SliderAboutProjects = styled.section`
       background: url('./assets/icon-label.png') no-repeat bottom center;
       background-size: 100%;
 
-      span { font-size: 1em; color: #FFF; font-weight: 600; margin-top: 57px; 
+      span { font-size: 1em; color: #FFF; font-weight: 600; margin-top: 57px;
         text-shadow: 0 0 3px #000; display: block; z-index: 100; }
     }
 
@@ -185,9 +156,9 @@ export const SliderAboutProjects = styled.section`
   article:nth-child(2) { background: url('./assets/turismo.png') no-repeat center center; background-size: cover; }
   article:nth-child(3) { background: url('./assets/educacao.png') no-repeat center center; background-size: cover; }
   article:nth-child(4) { background: url('./assets/escotismo.png') no-repeat center center; background-size: cover; }
-  article:nth-child(5) { background: url('./assets/meioambiente.png') no-repeat center center; 
+  article:nth-child(5) { background: url('./assets/meioambiente.png') no-repeat center center;
     background-size: cover; border-top-right-radius: 10px; border-bottom-right-radius: 10px;
-    .icons-projects { width: 150px; }  
+    .icons-projects { width: 150px; }
   }
 `;
 
@@ -221,8 +192,8 @@ export const LawsandProjects = styled.div`
     ul { margin-top: -70px; }
   }
 
-  ul { display: flex; 
-    
+  ul { display: flex;
+
     li { list-style: none; padding: 0 20px; margin-top: -70px;
       .icons { width: 90px; height: 100px; display: block; background: #F0F0F5; text-indent: -9999px;
          border-radius: 7px; text-decoration: none; transition: all .7s ease-in-out; cursor: pointer; }
@@ -290,7 +261,7 @@ export const Footer = styled.footer`
   ul {
     margin: 0 auto;
     span { font-weight: 600; color: #005AFF; display: block; }
-    p { font-size: .8em; color: #323232; 
+    p { font-size: .8em; color: #323232;
       a { text-decoration: none; color: #323232; }
     }
 

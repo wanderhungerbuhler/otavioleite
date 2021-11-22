@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { Menu, Logo } from '@/styles/Home';
+import { Menu, Logo } from '@/styles/components/Menu/styles';
 
 const MenuHome: React.FC = () => {
   return (
@@ -12,12 +12,12 @@ const MenuHome: React.FC = () => {
       <ul>
         <li><Link href="#biografia"><a>Biografia</a></Link></li>
         <li><Link href="#acoesnacamara"><a>Ações na Câmara</a></Link></li>
-        <li><Link href="#"><a>Notícias</a></Link></li>
+        <li><Link href="/posts"><a>Notícias</a></Link></li>
         <li><Link href="#"><a>Mídias</a></Link></li>
         <li><Link href="#leiseprojetos"><a>Leis e Projetos</a></Link></li>
         <li><Link href="#contato"><a>Contato</a></Link></li>
       </ul>
-    </Menu> 
+    </Menu>
   )
 }
 
