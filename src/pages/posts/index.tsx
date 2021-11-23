@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { RichText } from 'prismic-dom';
@@ -43,7 +43,7 @@ export default function Posts({ posts }: PostsProps) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const prismic = getPrismicClient();
 
   const response = await prismic.query([
@@ -69,6 +69,6 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       posts,
-    }
+    },
   }
 }

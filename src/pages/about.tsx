@@ -16,21 +16,27 @@ export default function About() {
             <Image
               width="300"
               height="400"
-              src={OLKub} />
+              src={OLKub}
+              alt="fotos-otavioleite"
+            />
           </li>
 
           <li>
             <Image
               width="450"
               height="450"
-              src={OtavioLeiteAbout} />
+              src={OtavioLeiteAbout}
+              alt="fotos-otavioleite"
+            />
           </li>
 
           <li>
             <Image
               width="300"
               height="400"
-              src={OLDespertarPolitico} />
+              src={OLDespertarPolitico}
+              alt="fotos-otavioleite"
+            />
           </li>
         </ul>
 
