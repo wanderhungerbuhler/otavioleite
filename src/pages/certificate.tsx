@@ -20,6 +20,7 @@ export default function Certificate() {
         src="/assets/honraaomerito.jpeg"
         width={960}
         height={600}
+        alt="Certificado - Honra ao Merito"
       />
     </Container>
   )
