@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Menu = styled.div`
   width: 100%;
-  position: fixed;
   height: 5rem;
   background: #fff;
   display: flex;

@@ -18,7 +18,7 @@ const MenuHome: React.FC = () => {
       <ActiveLink activeClassName="active" href="/#acoesnacamara">
         <a>Ações na Câmara</a>
       </ActiveLink>
-      <ActiveLink activeClassName="active" href="/posts" prefetch>
+      <ActiveLink activeClassName="active" href="/posts">
         <a>Notícias</a>
       </ActiveLink>
       <ActiveLink activeClassName="active" href="#">
