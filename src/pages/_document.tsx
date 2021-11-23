@@ -33,7 +33,9 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
-          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet" />
           {/* <meta name="description" content="IR Cuidadores Valorizando os Cuidadores - visa visa garantir a Dedução do Imposto de Renda para as famílias que contratam Cuidadores de Idoso e Cuidadores de Pessoas com Deficiência." />
 
           <meta name="keywords" content="ir cuidadores, imposto de renda cuidadores, cuidadores rj, rio de janeiro

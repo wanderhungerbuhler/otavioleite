@@ -2,27 +2,51 @@ import styled from 'styled-components';
 
 export const Menu = styled.div`
   width: 100%;
+  position: fixed;
+  height: 5rem;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #DBDBDB;
 
-  ul {
-    li { list-style: none; display: inline-block; padding: 0 10px; }
-    a { color: #999; display: block; text-decoration: none; padding: 5px 10px; transition: all .7s ease-in-out; }
-  }
+  top: 0;
+  z-index: 1;
 
-  @media (max-width: 500px) {
-    ul {
-      li { display: block; text-align: center; margin-bottom: 10px; }
+  a {
+    display: inline-block;
+    position: relative;
+    height: 5rem;
+    line-height: 5rem;
+    text-decoration: none;
+    padding: 0 0.5rem;
+    color: #999;
+    transition: color .2s;
+
+    & + a  {
+      margin-left: 2rem;
+    }
+
+    &:hover {
+      color: #999;
+    }
+
+    &.active::after {
+      content: '';
+      height: 3px;
+      border-radius: 3px 3px 0 0;
+      width: 100%;
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      background: #005AFF;
     }
   }
 `;
 
 export const Logo = styled.div`
-  width: 120px;
-  height: 85px;
+  width: 100px;
+  height: 70px;
   background: url('./assets/logo.svg') no-repeat center center;
   background-size: 100%;
   margin: 10px auto;

@@ -1,22 +1,36 @@
 import React from 'react';
-import Link from 'next/link';
-
 import { Menu, Logo } from '@/styles/components/Menu/styles';
 
+import { ActiveLink } from '@/components/ActiveLink';
+
 const MenuHome: React.FC = () => {
+
   return (
     <Menu>
-      <Link href="/">
-        <a><Logo /></a>
-      </Link>
-      <ul>
-        <li><Link href="#biografia"><a>Biografia</a></Link></li>
-        <li><Link href="#acoesnacamara"><a>Ações na Câmara</a></Link></li>
-        <li><Link href="/posts"><a>Notícias</a></Link></li>
-        <li><Link href="#"><a>Mídias</a></Link></li>
-        <li><Link href="#leiseprojetos"><a>Leis e Projetos</a></Link></li>
-        <li><Link href="#contato"><a>Contato</a></Link></li>
-      </ul>
+      <a><Logo /></a>
+
+      <ActiveLink activeClassName="active" href="/#">
+        <a>Home</a>
+      </ActiveLink>
+      <ActiveLink activeClassName="active" href="/#biografia">
+        <a>Biografia</a>
+      </ActiveLink>
+      <ActiveLink activeClassName="active" href="/#acoesnacamara">
+        <a>Ações na Câmara</a>
+      </ActiveLink>
+      <ActiveLink activeClassName="active" href="/posts" prefetch>
+        <a>Notícias</a>
+      </ActiveLink>
+      <ActiveLink activeClassName="active" href="#">
+        <a>Mídias</a>
+      </ActiveLink>
+      <ActiveLink activeClassName="active" href="/#leiseprojetos">
+        <a>Leis e Projetos</a>
+      </ActiveLink>
+      <ActiveLink activeClassName="active" href="/#contato">
+        <a>Contato</a>
+      </ActiveLink>
+
     </Menu>
   )
 }

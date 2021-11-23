@@ -6,11 +6,11 @@ export default createGlobalStyle`
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    background: #ececec;
+    background: #F9F9F9;
   }
 
   a { text-decoration: none; color: inherit; }
