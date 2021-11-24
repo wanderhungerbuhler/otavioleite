@@ -47,7 +47,7 @@ export const Bio = styled.div`
 
   .bio-otavioleite {
     width: 45%;
-    p { color: #999; margin-top: 20px; }
+    p { color: #999; margin-top: 20px; line-height: 1.5rem; }
   }
 
   @media (max-width: 500px) {

@@ -1,12 +1,24 @@
 import React from 'react';
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
+import Prismic from '@prismicio/client';
+import { getPrismicClient } from '@/services/prismic';
 
 import {
   Container, Informative, Bio, Actions, LawsandProjects,
   SliderAboutProjects, Socials, Footer
 } from '@/styles/Home';
 
-export default function Home() {
+interface Post {
+  slug: string;
+  excerpt: string;
+}
+
+interface PostsProps {
+  posts: Post[]
+}
+
+export default function Home({ posts }: PostsProps) {
   return (
     <>
       <head>
@@ -21,28 +33,15 @@ export default function Home() {
           </a>
         </Informative>
         <Bio id="biografia">
-          <h1 >Biografia</h1>
+          <h1>Biografia</h1>
           <div className="otavioleite"></div>
           <div className="bio-otavioleite">
-            <p>
-              Otavio Leite, Deputado Federal do Rio de Janeiro, tem 58 anos, sergipano de Aracaju,
-              é afilhado de batismo do ex-presidente Juscelino Kubitschek. Foi criado no Rio por seu avô –
-              o senador Júlio Leite. É casado com a pedagoga Ângela Leite e tem dois filhos, Fernando
-              e Otavio Filho.
-            </p>
-            <p>
-              Professor universitário, especialista em Políticas Públicas pela UFRJ,
-              estudou no Colégio Andrews de onde saiu para formar-se bacharel em Direito pela UERJ.
-              Ainda na UERJ, presidiu o histórico Diretório Acadêmico Luiz Carpenter.
-            </p>
-
-            <p>
-              Antes de iniciar sua carreira parlamentar, participou ativamente da administração pública
-              nas duas gestões do então prefeito Marcello Alencar, quando exerceu os cargos de coordenador
-              das administrações regionais e de secretário municipal de Governo, aos 29 anos de idade.
-            </p>
-
-            <Link href="/about"><a>Leia Mais</a></Link>
+            {posts.map(post => (
+              <>
+                <p key={post.slug}>{post.excerpt}</p>
+                <Link href={`/about/${post.slug}`}><a>Leia Mais</a></Link>
+              </>
+            ))}
           </div>
         </Bio>
 
@@ -134,4 +133,29 @@ export default function Home() {
       </Footer>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+
+  const response = await prismic.query(
+    Prismic.predicates.at('document.type', 'bio')
+    , {
+      fetch: ['bio.content'],
+      pageSize: 1,
+    });
+
+  const posts = response.results.map(post => {
+    return {
+      slug: post.uid,
+      excerpt: post.data.content.find(content => content.type === 'paragraph')?.text ?? '',
+    };
+  });
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 60 * 60 * 24, // 24 horas
+  }
 }
