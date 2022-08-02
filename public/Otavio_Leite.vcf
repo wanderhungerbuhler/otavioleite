@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Leite;Otavio
+FN:Otavio Leite
+ORG:Câmara dos Deputados
+TITLE:Deputado Federal
+TEL;type=CELL;type=pref:6199949447
+EMAIL;WORK;INTERNET:pessoal@otavioleite.com.br
+item1.URL:https://otavioleite.com.br
+item1.X-ABLabel:Site
+item2.URL:https://instagram.com/otavioleite
+item2.X-ABLabel:Instagram
+item3.URL:https://facebook.com/otavioleite
+item3.X-ABLabel:Facebook
+END:VCARD
